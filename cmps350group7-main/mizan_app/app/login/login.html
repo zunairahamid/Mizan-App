@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login - Mizān</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+
+<body>
+    <div class="login-container">
+        <h2>Login to Mizān</h2>
+        <form id="loginForm">
+            <input type="email" id="email" placeholder="Email" required />
+            <input type="password" id="password" placeholder="Password" required />
+            <select id="role" required>
+                <option value="">Select Role</option>
+                <option value="student">Student</option>
+                <option value="instructor">Instructor</option>
+                <option value="coordinator">Coordinator</option>
+            </select>
+            <button type="submit">Login</button>
+        </form>
+    </div>
+    <script src="js/index.js"></script>
+</body>
+
+</html>

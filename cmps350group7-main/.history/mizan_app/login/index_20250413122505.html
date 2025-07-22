@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login - Mizān</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+
+<body>
+    <div class="login-container">
+        <h2>Login to Mizān</h2>
+        <form id="loginForm">
+            <input type="email" id="email" placeholder="Email" required />
+            <input type="password" id="password" placeholder="Password" required />
+            <select id="role" required>
+                <option value="">Select Role</option>
+                <option value="student">Student</option>
+                <option value="instructor">Instructor</option>
+                <option value="coordinator">Coordinator</option>
+            </select>
+            <button type="submit">Login</button>
+        </form>
+    </div>
+    <script>
+        document.getElementById("loginForm").addEventListener("submit", async function (e) {
+  e.preventDefault();
+
+  const email = document.getElementById("email").value.trim();
+  const password = document.getElementById("password").value.trim();
+  const role = document.getElementById("role").value;
+  const errorMsg = document.getElementById("errorMsg");
+
+  try {
+    const response = await fetch('data/users.json');
+    const users = await response.json();
+
+    const matchedUser = users.find(
+      user => user.email === email && user.password === password && user.role === role
+    );
+
+    if (matchedUser) {
+      localStorage.setItem("user", JSON.stringify(matchedUser));
+      alert("Login successful!");
+
+      if (role === "student") {
+        href = "../../get_assessments/student-get-assessments/index.html";
+      } else if (role === "instructor") {
+       href = "../../get_assessments/instructor-get-assessments/index.html";
+      } else {
+        href = "../../get_assessments/coordinator-get-assessments/index.html";
+      }      
+    } else {
+      errorMsg.textContent = "Invalid credentials or role. Try again.";
+    }
+  } catch (error) {
+    console.error("Failed to fetch users:", error);
+    errorMsg.textContent = "An error occurred. Please try again later.";
+  }
+});
+
+    </script>
+</body>
+
+</html>

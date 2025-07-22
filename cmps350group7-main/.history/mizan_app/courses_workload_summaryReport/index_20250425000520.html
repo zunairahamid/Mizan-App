@@ -1,0 +1,32 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <title>Courses Workload Summary</title>
+</head>
+<body>
+  <h2>Courses Workload Summary Report</h2>
+  <ul id="summaryList"></ul>
+
+  <script>
+    async function fetchSummary() {
+      const res = await fetch("/api/courses_workload_summary");
+      const data = await res.json();
+
+      const ul = document.getElementById("summaryList");
+      data.forEach(item => {
+        const li = document.createElement("li");
+        li.innerHTML = `<strong>${item.coursecode} - ${item.course}</strong><br>
+                        Total Effort: ${item.totalEffort} hrs<br>
+                        Total Weight: ${item.totalWeight}<br>
+                        Number of Assessments: ${item.count}<br><br>`;
+        ul.appendChild(li);
+      });
+    }
+
+    fetchSummary();
+  </script>
+</body>
+</html>

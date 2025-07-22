@@ -1,0 +1,78 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model AssessmentType {
+  id    String @id
+  label String
+}
+
+model User {
+  id        Int    @id @default(autoincrement())
+  firstName String
+  lastName  String
+  email     String @unique
+  password  String
+  role      String
+  program   String
+
+  registeredSections Section[]    @relation("StudentSections")
+  assessments        Assessment[] @relation("UserToAssessments")
+  comments           Comment[]    @relation("UserToComments")
+}
+
+model Section {
+  crn          String @id
+  courseCode   String
+  courseName   String
+  creditHours  Int
+  instructorId Int
+  program      String
+  semester     String
+
+  students    User[]       @relation("StudentSections")
+  assessments Assessment[]
+  comments    Comment[]
+}
+
+model Assessment {
+  id          Int      @id @default(autoincrement())
+  sectionCRN  String
+  title       String
+  type        String
+  dueDate     DateTime
+  effortHours Int
+  weight      Float
+  createdBy   Int
+  createdDate DateTime @default(now())
+
+  section Section @relation(fields: [sectionCRN], references: [crn])
+  creator User    @relation(name: "UserToAssessments", fields: [createdBy], references: [id])
+}
+
+model Semester {
+  id        String  @id
+  label     String
+  isDefault Boolean @default(false)
+}
+
+model Comment {
+  id               Int      @id @default(autoincrement())
+  sectionCRN       String
+  authorId         Int
+  title            String?
+  content          String
+  createdAt        DateTime @default(now())
+  replyToCommentId Int?
+
+  section Section @relation(fields: [sectionCRN], references: [crn])
+  author  User    @relation(name: "UserToComments", fields: [authorId], references: [id])
+}

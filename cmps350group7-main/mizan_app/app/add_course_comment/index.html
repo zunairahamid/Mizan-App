@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Add Course Comment</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <h2>Add Comment to a Course</h2>
+
+  <select id="courseSelect">
+    <option value="CMPS350">CMPS350</option>
+    <option value="CMPS351">CMPS351</option>
+  </select><br /><br />
+
+  <form id="commentForm">
+    <input type="text" id="commentTitle" placeholder="Comment Title" required /><br /><br />
+    <textarea id="commentBody" placeholder="Write your comment..." required></textarea><br /><br />
+    <input type="text" id="commentAuthor" placeholder="Your Name" required /><br /><br />
+    <button type="submit">Submit Comment</button>
+  </form>
+
+  <p id="successMsg" style="color: green;"></p>
+
+  <script src="js/index.js"></script>
+</body>
+</html>

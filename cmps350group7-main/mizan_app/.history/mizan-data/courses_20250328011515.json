@@ -1,0 +1,94 @@
+[
+    {
+        "coursecode":"CMPS350",
+        "coursename":"Web Application Development",
+        "program":"CS"
+        
+    },
+    {   
+        "coursecode":"CMPS185",
+        "coursename":"Introduction To Cybersecurity",
+        "program":"CS" 
+
+    },
+    { 
+        "coursecode":"CMPS380",
+        "coursename":"Fundamentals Of Cybersecurity",
+        "program":"CS"
+    },
+    { 
+        "coursecode":"CMPS385",
+        "coursename":"Computer Security",
+        "program":"CS"
+    },
+    { 
+        "coursecode":"CMPS151",
+        "coursename":"Programming Concepts",
+        "program":"CS"
+    },
+    { 
+        "coursecode":"CMPS251",
+        "coursename":"Object Oriented Programming",
+        "program":"CS"
+    },
+    { 
+        "coursecode":"CMPS303",
+        "coursename":"Data Structures",
+        "program":"CS"
+    },
+    { 
+        "coursecode":"CMPS205",
+        "coursename":"Discrete Structures",
+        "program":"CS"
+    },
+    { 
+        "coursecode":"CMPS351",
+        "coursename":"Fundamentals Of Database",
+        "program":"CS"
+    },
+    { 
+        "coursecode":"CMPS200",
+        "coursename":"Computer Ethics",
+        "program":"CS"
+    },
+    { 
+        "coursecode":"CMPS323",
+        "coursename":"Design And Analysis Of Algorithm",
+        "program":"CS"
+    },
+    { 
+        "coursecode":"CMPE263",
+        "coursename":"Computer Architecture And Organization",
+        "program":"CE"
+    },
+    { 
+        "coursecode":"CMPS405",
+        "coursename":"Operating Systems",
+        "program":"CS"
+    },
+    { 
+        "coursecode":"CMPS312",
+        "coursename":"Mobile Application Development",
+        "program":"CS"
+    },
+    { 
+        "coursecode":"CMPS360",
+        "coursename":"Data Science Fundamentals",
+        "program":"CS"
+    },
+    { 
+        "coursecode":"CMPS307",
+        "coursename":"Indroduction To Project Management And Entrepreneurship",
+        "program":"CS"
+    },
+    { 
+        "coursecode":"CMPS310",
+        "coursename":"Software Engineering",
+        "program":"CS"
+    },
+    { 
+        "coursecode":"CMPE355",
+        "coursename":"Data Communication And Computer Networks",
+        "program":"CE"
+    }
+]

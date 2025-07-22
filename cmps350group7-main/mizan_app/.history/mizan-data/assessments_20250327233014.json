@@ -1,0 +1,32 @@
+[
+    {
+        "title":"Mizan Web App Project",
+        "course-code":"CMPS350",
+        "course-name":"Web Application Development",
+        "due-date":"06-04-2025",
+        "effort-hours":"3",
+        "weight":"20%",
+        "assessment-type":"Project"
+        
+    },
+    {   
+        "title":"CMPS185 Report",
+        "course-code":"CMPS185",
+        "course-name":"Introduction To Cybersecurity",
+        "due-date":"01-04-2025",
+        "effort-hours":"0.5",
+        "weight":"15%",
+        "assessment-type":"Homework"
+        
+    },
+    { 
+        "title":"CMPS380 Quiz 3",
+        "course-code":"CMPS380",
+        "course-name":"Fundamentals Of Cybersecurity",
+        "due-date":"19-04-2025",
+        "effort-hours":"4",
+        "weight":"5%",
+        "assessment-type":"Quiz"
+        
+    }
+]

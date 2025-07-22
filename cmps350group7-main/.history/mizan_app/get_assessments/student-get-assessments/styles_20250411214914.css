@@ -1,0 +1,111 @@
+:root {
+    --background-dark: #333;
+    --background-light: #f4f4f4;
+    --text-dark: #333;
+    --text-light: #fff;
+    --primary-color: #4a6fa5;
+    --secondary-color: #166088;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: var(--text-dark);
+}
+
+.dashboard {
+    background: var(--secondary-color);
+    padding: 10px 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.nav-bar a:hover {
+    color: var(--primary-color);
+}
+
+.main-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.content {
+    padding: 20px;
+}
+
+.dropdown {
+    padding: 20px;
+    background: #f0f0f0;
+}
+
+.dropdown select {
+    padding: 8px 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background: white;
+    font-size: 16px;
+    cursor: pointer;
+    width: 250px;
+}
+
+#upcoming-assessments {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#upcoming-assessments li {
+    background: white;
+    margin: 10px 0;
+    padding: 15px;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.assessment-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+}
+
+.assessment-header h3 {
+    margin: 0;
+    color: var(--primary-color);
+}
+
+.course-code {
+    background: var(--secondary-color);
+    color: white;
+    padding: 3px 8px;
+    border-radius: 3px;
+    font-size: 14px;
+}
+
+.assessment-details {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 10px;
+}
+
+.assessment-details span {
+    font-size: 14px;
+}
+
+.error {
+    color: #d32f2f;
+    font-weight: bold;
+    padding: 10px;
+    background-color: #ffebee;
+    border-radius: 4px;
+}

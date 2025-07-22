@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Add Assessment - Mizan</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+<div class="assessment-form">
+    <h2>Add Assessment</h2>
+    <form id="assessment-form">
+        <select id="course" required></select>
+        <input type="text" id="title" placeholder="Title" required>
+        <input type="text" id="coursename" placeholder="CourseName" required>
+        <input type="date" id="due-date" required>
+        <input type="number" id="effort-hours" placeholder="Effort Hours" required>
+        <input type="number" id="weight" placeholder="Weight (%)" required>
+        <select id="type" required>
+            <option value="Homework">Homework</option>
+            <option value="Quiz">Quiz</option>
+            <option value="Midterm">Midterm</option>
+            <option value="Final Exam">Final Exam</option>
+            <option value="Project">Project</option>
+        </select>
+        <button type="submit">Save</button>
+    </form>
+</div>
+<script src="script.js"></script>
+    </body>
+</html>

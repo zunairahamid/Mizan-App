@@ -1,0 +1,24 @@
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 40px;
+  background-color: #f8f9fa;
+  color: #333;
+}
+h2 {
+  color: #4a148c;
+}
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+li {
+  background: white;
+  margin-bottom: 15px;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+strong {
+  color: #1a237e;
+}

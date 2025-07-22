@@ -1,0 +1,54 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model AssessmentType {
+  id    String @id
+  label String
+}
+model Assessment{
+  id      String @id
+  sectionCRN String
+  title String
+  type String
+  dueDate DateTime
+  effortHours Int
+  weight Float
+}
+model Section{
+crn String @id
+courseCode String
+courseName String
+creditHours Int
+instructorId Int
+program String
+semester String
+}
+model Semester{
+  id String @id
+  label String
+  isDefault Boolean @default(false)
+}
+model Users{
+  id String @id
+  firstName String
+  lastName String
+  email String
+  password String
+  role String
+  program String
+  registeredSections RegisteredSection[] @relation("UserRegisteredSections")
+}
+model RegisteredSection {
+  id String @id
+  userId String
+  user Users @relation(fields: [userId], references: [id], name: "UserRegisteredSections")
+} user Users @relation(fields: [userId], references: [id])
